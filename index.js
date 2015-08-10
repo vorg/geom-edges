@@ -1,5 +1,13 @@
 var clone = require('clone');
 
+function compareEdgeIndices(a, b) {
+    if (a[0] < b[0]) return -1;
+    if (a[0] > b[0]) return 1;;
+    if (a[1] < b[1]) return -1;
+    if (a[1] > b[1]) return 1;;
+    return 0;
+}
+
 function computeEdgesForGeometry(geometry) {
   return {
     positions: clone(geometry.positions),
@@ -20,7 +28,23 @@ function computeEdgesForFaces(faces) {
             ]);
         }
     }
-    return edges;
+
+    edges.sort(compareEdgeIndices);
+
+    var uniqueEdges = [ edges[0] ];
+    for(var i=1, numEdges=edges.length; i<numEdges; i++) {
+        var prevEdge = edges[i-1];
+        var edge = edges[i];
+
+        if (prevEdge[0] == edge[0] && prevEdge[1] == edge[1]) {
+            continue;
+        }
+        else {
+            uniqueEdges.push(edge);
+        }
+    }
+
+    return uniqueEdges;
 }
 
 function computeEdges(geometryOrFaces) {
