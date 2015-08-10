@@ -1,0 +1,33 @@
+{
+  "name": "geom-edges",
+  "version": "1.0.0",
+  "description": "Computes unique edges for a list of faces",
+  "main": "index.js",
+  "license": "MIT",
+  "author": {
+    "name": "Marcin Ignac",
+    "email": "marcin.ignac@gmail.com",
+    "url": "https://github.com/vorg"
+  },
+  "dependencies": {
+    "clone": "^1.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {},
+  "keywords": [
+    "3d",
+    "geometry",
+    "simplicial",
+    "complex",
+    "geom",
+    "edges"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/vorg/geom-edges.git"
+  },
+  "homepage": "https://github.com/vorg/geom-edges",
+  "bugs": {
+    "url": "https://github.com/vorg/geom-edges/issues"
+  }
+}
