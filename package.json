@@ -1,33 +1,46 @@
 {
   "name": "geom-edges",
   "version": "1.1.0",
-  "description": "Computes unique edges for a list of faces",
-  "main": "index.js",
-  "license": "MIT",
-  "author": {
-    "name": "Marcin Ignac",
-    "email": "marcin.ignac@gmail.com",
-    "url": "https://github.com/vorg"
-  },
-  "dependencies": {
-    "clone": "^1.0.2"
-  },
-  "devDependencies": {},
-  "scripts": {},
+  "description": "Computes unique edges for a list of faces.",
   "keywords": [
-    "3d",
-    "geometry",
+    "geom",
+    "edges",
     "simplicial",
     "complex",
-    "geom",
-    "edges"
+    "3d",
+    "pex",
+    "geometry",
+    "webgl"
   ],
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/vorg/geom-edges.git"
-  },
   "homepage": "https://github.com/vorg/geom-edges",
-  "bugs": {
-    "url": "https://github.com/vorg/geom-edges/issues"
+  "bugs": "https://github.com/vorg/geom-edges/issues",
+  "repository": "vorg/geom-edges",
+  "license": "MIT",
+  "author": "Marcin Ignac <marcin.ignac@gmail.com> (https://github.com/vorg)",
+  "contributors": [
+    "Damien Seguin (https://github.com/dmnsgn)"
+  ],
+  "sideEffects": false,
+  "type": "module",
+  "exports": "./index.js",
+  "main": "index.js",
+  "types": "types/index.d.ts",
+  "scripts": {
+    "dev": "snowdev dev",
+    "release": "snowdev release"
+  },
+  "dependencies": {
+    "pex-math": "^4.1.0",
+    "typed-array-constructor": "^1.0.1"
+  },
+  "devDependencies": {
+    "es-module-shims": "^1.8.3",
+    "pex-context": "^3.0.0-alpha.8",
+    "pex-gui": "^3.0.0",
+    "primitive-geometry": "^2.10.0"
+  },
+  "engines": {
+    "node": ">=20.0.0",
+    "npm": ">=9.6.4"
   }
 }
