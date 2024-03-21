@@ -31,7 +31,7 @@ _Note: if faces is a TypedArray (eg. `new Uint32Array([a, b, c, a, b, c, ...]`) 
 
 **Returns**
 
-- edges: `TypedArray | Array<[x, y, z]>` – list of edges (`new Uint32Array([a, b, b, c, c, d, ...]` or `new Array([a, b], [b, c], [c, d], ...)`)
+- edges: `Array<[a, b]>` – list of edges (`new Array([a, b], [b, c], [c, d], ...)`)
 
 ## License
 
