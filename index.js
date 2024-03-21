@@ -1,5 +1,4 @@
 import { avec3, vec3 } from "pex-math";
-import typedArrayConstructor from "typed-array-constructor";
 
 function compareEdgeIndices(a, b) {
   if (a[0] < b[0]) return -1;
@@ -45,11 +44,6 @@ function computeEdges(faces) {
     if (prevEdge[0] === edge[0] && prevEdge[1] === edge[1]) continue;
 
     uniqueEdges.push(edge);
-  }
-
-  if (isFlatArray) {
-    uniqueEdges = uniqueEdges.flat();
-    return new (typedArrayConstructor(Math.max(...uniqueEdges)))(uniqueEdges);
   }
 
   return uniqueEdges;
